@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ad.size" content="width=100%, height=100%">
+    <!-- Animate minfied -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        function myclick() {
+          var clickTag = getUrlParameter("url");
+          document.location=clickTag;
+        }
+    </script>
+    <script type="text/javascript">
+        var clickTag = getUrlParameter('url'); 
+    </script>
+    <title>Kindi Kids</title>
+
+</head>
+<body>
+    <div class="bg">
+        <!-- Invitational text  -->
+        <div class="text">
+            <img src="source/text.png" alt="Find same cards" class="text-img" width="100%">
+            <p>у тебя <span class="counter">2</span> попытк<span class="multi">и</span><span class="solo">а</span> </p>
+        </div>
+        <!-- Memory game -->
+        <section class="game">
+            <div class="memory-card clock-left" data-advantage="clock">
+                <img src="source/mista.jpg" alt="Clock" class="front-face">
+                <img src="source/card.png" alt="Card back" class="back-face">
+            </div>
+            <div class="memory-card clock-right" data-advantage="clock"> 
+                <img src="source/mista.jpg" alt="Clock" class="front-face">
+                <img src="source/card.png" alt="Card back" class="back-face">
+            </div>
+           
+            <div class="memory-card couch-left" data-advantage="couch">
+                <img src="source/sindy.jpg" alt="Couch" class="front-face">
+                <img src="source/card.png" alt="Card back" class="back-face">
+            </div>
+            <div class="memory-card couch-right" data-advantage="couch">
+                <img src="source/sindy.jpg" alt="Couch" class="front-face">
+                <img src="source/card.png" alt="Card back" class="back-face">
+            </div>
+            <div class="memory-card bag-left" data-advantage="bag">
+                <img src="source/dona.png" alt="Bag" class="front-face">
+                <img src="source/card.png" alt="Card back" class="back-face">
+            </div>
+            <div class="memory-card bag-right" data-advantage="bag">
+                <img src="source/dona.png" alt="Bag" class="front-face">
+                <img src="source/card.png" alt="Card back" class="back-face">
+            </div>
+            <!-- <div class="memory-card marsha-left" data-advantage="marsha">
+                <img src="source/marsha.jpg" alt="Bag" class="front-face">
+                <img src="source/card.png" alt="Card back" class="back-face">
+            </div>
+            <div class="memory-card marsha-right" data-advantage="marsha">
+                <img src="source/marsha.jpg" alt="Bag" class="front-face">
+                <img src="source/card.png" alt="Card back" class="back-face">
+            </div> -->
+        </section>
+
+<!-- Product advantages -->
+<div class="advantage-img"> <a onclick="myclick()" href="javascript:void(window.open(window.clickTag))">
+    <img class="couch animated fadeIn delay-1s" src="source/sindyFIn.png" alt="Comfort as advantage" width="100%">
+    <img class="clock animated fadeIn delay-1s" src="source/mistaFin.png" alt="Comfort as advantage" width="100%">
+    <img class="bag animated fadeIn delay-1s" src="source/donaFin.png" alt="Comfort as advantage" width="100%">
+    <img class="marsha animated fadeIn delay-1s" src="source/marshaFin.png" alt="Comfort as advantage" width="100%">
+</a>
+</div>
+<!-- Offer  -->
+<!-- <div class="offer animated fadeIn delay-1s"> -->
+    <img class="offer animated fadeIn delay-1s" src="/source/offer.png" alt="">
+<!-- </div> -->
+<!-- Button  -->
+<div class="cta-btn animated fadeIn delay-1s">
+    <a onclick="myclick()" href="javascript:void(window.open(window.clickTag))"><img src="source/button.png" alt="Call to book" width="100%"></a>
+</div>
+
+    </div>
+    <!-- Script   -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
